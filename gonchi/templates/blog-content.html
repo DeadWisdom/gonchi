@@ -1,0 +1,12 @@
+<article>
+<h1>{{ page.meta.title | typography }}</h1>
+{% if page.meta.byline %}
+    <h2 class="byline">{{ page.meta.byline | typography }}</h2>
+{% endif %}
+{% block meta %}
+<div class="meta">{{ page.meta.author or default_author }} &middot; {{ publish_date(page) }} &middot; <a href="{{ url_for('blog_item', path=page.path.rsplit('/', 1)[1]) }}">permalink</a></div>
+{% endblock %}
+{% block content %}
+    {{ page.html|safe }}
+{% endblock content %}
+</article>

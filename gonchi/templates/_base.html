@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ title }}</title>
+
+    <style>
+      {% include "styles/root.css" %}
+      {% include "styles/reset.css" %}
+    </style>
+
+    <link rel="stylesheet" href="/static/base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {% block font %}
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap" rel="stylesheet">
+    {% endblock %}
+
+    {% block head %}
+    {% endblock %}
+  </head>
+  <body>
+    {% block nav %}
+    <nav>
+        <a href="/">Home</a>
+        <a href="/blog">Blog</a>
+    </nav>
+    {% endblock %}
+    {% block main %}
+    <main>
+      <article>{% block content %} {{ page.html|safe }} {% endblock content %}</article>
+    </main>
+    {% endblock main %}
+    {% block footer %}
+    {% endblock %}
+  </body>
+</html>
