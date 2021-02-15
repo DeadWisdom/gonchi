@@ -1,0 +1,9 @@
+{% extends "base.html" %} 
+
+{% block main %}
+<main>
+    {% for page in get_latest_blog_pages(10) %}
+        {% include "blog-content.html" %}
+    {% endfor %}
+</main>
+{% endblock main %}

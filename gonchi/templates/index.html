@@ -1,0 +1,10 @@
+{% extends "base.html" %} 
+
+{% block main %}
+<main>
+    <article class="intro">{% block content %} {{ page.html|safe }} {% endblock content %}</article>
+    {% for page in get_latest_blog_pages() %}
+        {% include "article-content.html" %}
+    {% endfor %}
+</main>
+{% endblock main %}

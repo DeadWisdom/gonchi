@@ -1,0 +1,130 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-display);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.1rem;
+  max-width: 24ch;
+  word-break: break-word;
+}
+
+h2 {
+  font-size: 1.5rem;
+  word-break: break-word;
+}
+
+h3 {
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.byline {
+  font-size: 1rem;
+  margin-top: 0;
+  max-width: 60ch;
+}
+
+p,
+section,
+h3,
+ul,
+ol {
+  font-family: var(--font-readable);
+  max-width: 60ch;
+}
+
+a {
+  color: var(--color-link);
+}
+
+article,
+nav,
+.wrapper {
+  max-width: var(--content-width);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  display: flex;
+  align-items: stretch;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-foreground);
+  text-transform: lowercase;
+  padding: var(--margin-1);
+  display: flex;
+  align-items: center;
+}
+
+nav a:hover {
+  background-color: var(--color-background-more);
+}
+
+nav .logotype {
+  font-size: 1.4em;
+  text-transform: none;
+  flex-grow: 1;
+}
+
+nav a + a {
+  margin-left: var(--margin-1);
+}
+
+main {
+  padding-top: 15vh;
+}
+
+article > *,
+section > * {
+  padding: 0 var(--margin-1);
+}
+
+article > * + *,
+section > * + * {
+  margin-top: var(--margin-2);
+}
+
+article ul {
+  margin-left: var(--margin-4);
+}
+
+article ul > li {
+}
+
+article + article {
+  padding-top: 8vh;
+  margin-top: 12vh;
+  border-top: 4px solid var(--color-background-more);
+}
+
+code {
+  background-color: var(--color-background-more);
+  padding: 0px 2px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9em;
+  vertical-align: middle;
+  white-space: pre-wrap;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack > * + * {
+  margin-top: var(--margin-2);
+}
+
+.meta {
+  font-size: 14px;
+  font-family: var(--font-display);
+}
